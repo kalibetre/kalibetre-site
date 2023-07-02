@@ -1,11 +1,12 @@
 import { HeadFC, PageProps } from 'gatsby';
 import * as React from 'react';
+import PageLayout from '../components/PageLayout';
 
 const NotFoundPage: React.FC<PageProps> = () => {
     return (
-        <main>
+        <PageLayout>
             <h1>Page not found</h1>
-        </main>
+        </PageLayout>
     );
 };
 
