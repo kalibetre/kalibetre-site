@@ -1,6 +1,6 @@
 import React from 'react';
-import HomeLink from './HomeLink';
 import PageLink from './PageLink';
+import HomeLinkIcon from './icons/HomeLinkIcon';
 
 const PAGE_LINKS = [
     {
@@ -18,12 +18,12 @@ const PageHeader = () => {
         <header>
             <nav className="flex justify-between">
                 <PageLink to="/">
-                    <HomeLink />
+                    <HomeLinkIcon />
                 </PageLink>
                 <div className="flex">
                     {PAGE_LINKS.map(({ label, link }) => (
                         <PageLink key={label} to={link}>
-                            {label}
+                            <span className="p-2">{label}</span>
                         </PageLink>
                     ))}
                 </div>
