@@ -12,7 +12,7 @@ const PageLink: React.FC<PageLinkProps> = (props) => {
         <div className="flex h-10 flex-col">
             <Link
                 to={to}
-                className="peer flex h-full w-full items-center justify-center text-sm uppercase hover:text-primary"
+                className="peer flex h-full w-full items-center justify-center text-xs uppercase hover:text-primary sm:text-sm"
             >
                 {children}
             </Link>
