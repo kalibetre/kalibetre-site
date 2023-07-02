@@ -6,7 +6,7 @@ import PageLayout from '../components/PageLayout';
 const IndexPage: React.FC<PageProps> = () => {
     return (
         <PageLayout>
-            <h1 className="text-3xl">Index Page</h1>
+            <Hero />
         </PageLayout>
     );
 };
