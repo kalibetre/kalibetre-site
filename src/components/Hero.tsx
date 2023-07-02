@@ -7,8 +7,9 @@ import TwitterIcon from './icons/TwitterIcon';
 import UpWorkIcon from './icons/UpWorkIcon';
 const Hero = () => {
     return (
-        <div className="flex w-full items-center justify-center">
-            <div className="h-full w-40 p-2">
+        <div className="flex w-full items-center justify-center gap-4 divide-x-[1px]">
+            <div className="relative h-full w-40 rounded-full p-2">
+                <div className="absolute bottom-0 right-0 h-full w-full rounded-full bg-slate-300 blur-md"></div>
                 <StaticImage
                     src="../images/kalibetre.png"
                     alt="kalkidan's portrait"
@@ -17,7 +18,7 @@ const Hero = () => {
                     className="h-full w-full rounded-full"
                 />
             </div>
-            <div className="flex flex-col justify-center border-l-[.5px] p-2 ">
+            <div className="flex flex-col justify-center p-2">
                 <p className="text-xs text-slate-500 sm:text-sm">Hi, I'm</p>
                 <h1 className="text-md font-bold sm:text-2xl">
                     Kalkidan Betre
