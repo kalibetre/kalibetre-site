@@ -9,10 +9,10 @@ type PageLinkProps = {
 const PageLink: React.FC<PageLinkProps> = (props) => {
     const { to, children } = props;
     return (
-        <div className="flex h-10 flex-col">
+        <div className="flex flex-col">
             <Link
                 to={to}
-                className="peer flex h-full w-full items-center justify-center text-xs capitalize hover:text-teal-600 dark:hover:text-teal-400 sm:text-sm"
+                className="peer flex h-full w-full items-center justify-center capitalize hover:text-teal-600 dark:hover:text-teal-400 sm:text-base"
             >
                 {children}
             </Link>
