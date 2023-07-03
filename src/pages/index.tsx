@@ -7,13 +7,23 @@ import PageLayout from '../components/PageLayout';
 import TechStack from '../components/TechStack';
 import DjangoIcon from '../components/icons/DjangoIcon';
 import ExpressIcon from '../components/icons/ExpressIcon';
+import GatsbyIcon from '../components/icons/GatsbyIcon';
 import ReactJsIcon from '../components/icons/ReactJsIcon';
 import SpringBootIcon from '../components/icons/SpringBootIcon';
+import TailwindIcon from '../components/icons/TailwindIcon';
 
 const TECH_STACKS = [
     {
         icon: <ReactJsIcon />,
         label: 'React',
+    },
+    {
+        icon: <GatsbyIcon />,
+        label: 'Gatsby',
+    },
+    {
+        icon: <TailwindIcon />,
+        label: 'Tailwind',
     },
     {
         icon: <DjangoIcon />,
