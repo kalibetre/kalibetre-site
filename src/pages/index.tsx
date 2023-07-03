@@ -1,5 +1,6 @@
-import type { HeadFC, PageProps } from 'gatsby';
+import { type HeadFC, type PageProps } from 'gatsby';
 import * as React from 'react';
+import FeaturedProjects from '../components/FeaturedProjects';
 import Hero from '../components/Hero';
 import PageHead from '../components/PageHead';
 import PageLayout from '../components/PageLayout';
@@ -36,6 +37,9 @@ const IndexPage: React.FC<PageProps> = () => {
                 {TECH_STACKS.map((techStack) => (
                     <TechStack key={techStack.label} {...techStack} />
                 ))}
+            </div>
+            <div className="my-12">
+                <FeaturedProjects />
             </div>
         </PageLayout>
     );
