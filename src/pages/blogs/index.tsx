@@ -1,4 +1,6 @@
+import { HeadFC } from 'gatsby';
 import React from 'react';
+import PageHead from '../../components/PageHead';
 import PageLayout from '../../components/PageLayout';
 
 const blogs = () => {
@@ -6,3 +8,5 @@ const blogs = () => {
 };
 
 export default blogs;
+
+export const Head: HeadFC = () => <PageHead title="Blogs" />;

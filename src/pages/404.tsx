@@ -1,5 +1,6 @@
 import { HeadFC, PageProps } from 'gatsby';
 import * as React from 'react';
+import PageHead from '../components/PageHead';
 import PageLayout from '../components/PageLayout';
 
 const NotFoundPage: React.FC<PageProps> = () => {
@@ -12,4 +13,4 @@ const NotFoundPage: React.FC<PageProps> = () => {
 
 export default NotFoundPage;
 
-export const Head: HeadFC = () => <title>Not found</title>;
+export const Head: HeadFC = () => <PageHead title="Not found" />;

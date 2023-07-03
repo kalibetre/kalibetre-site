@@ -7,9 +7,9 @@ import TwitterIcon from './icons/TwitterIcon';
 import UpWorkIcon from './icons/UpWorkIcon';
 const Hero = () => {
     return (
-        <div className="my-8 flex w-full items-center justify-center gap-4 divide-x-[1px]">
+        <div className="my-8 flex w-full items-center justify-center gap-4 divide-x-[1px] dark:divide-slate-500">
             <div className="relative h-full w-40 rounded-full p-2">
-                <div className="absolute bottom-0 right-0 h-full w-full rounded-full bg-slate-300 blur-md"></div>
+                <div className="absolute bottom-0 right-0 h-full w-full rounded-full bg-slate-300 blur-md dark:bg-slate-700"></div>
                 <StaticImage
                     src="../images/kalibetre.png"
                     alt="kalkidan's portrait"
