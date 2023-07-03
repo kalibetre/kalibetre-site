@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React from 'react';
+import GatsbyImageWrapper from './GatsbyImageWrapper';
 
 type ProjectCardProps = {
     slug: string;
@@ -11,20 +11,6 @@ type ProjectCardProps = {
 
 const ProjectCard: React.FC<ProjectCardProps> = (props) => {
     const { slug, title, desc, image } = props;
-
-    const getHeroImage = (imageUrl: any, alt: string) => {
-        const image = getImage(imageUrl);
-        if (!image) {
-            return null;
-        }
-        return (
-            <GatsbyImage
-                image={image}
-                alt={alt}
-                className="h-auto w-full rounded-md"
-            />
-        );
-    };
 
     return (
         <Link to={`/projects/${slug}`}>
@@ -40,7 +26,7 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
                         {desc}
                     </h3>
                 </div>
-                {getHeroImage(image, title)}
+                <GatsbyImageWrapper image={image} alt={title} />
             </div>
         </Link>
     );
