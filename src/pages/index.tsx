@@ -1,5 +1,6 @@
 import { type HeadFC, type PageProps } from 'gatsby';
 import * as React from 'react';
+import FeaturedBlogs from '../components/FeaturedBlogs';
 import FeaturedProjects from '../components/FeaturedProjects';
 import Hero from '../components/Hero';
 import PageHead from '../components/PageHead';
@@ -50,6 +51,9 @@ const IndexPage: React.FC<PageProps> = () => {
             </div>
             <div className="my-12">
                 <FeaturedProjects />
+            </div>
+            <div className="my-12">
+                <FeaturedBlogs />
             </div>
         </PageLayout>
     );
