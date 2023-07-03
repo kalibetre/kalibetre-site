@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import PageLink from './PageLink';
+import SearchButton from './SearchButton';
 import DarkModeIcon from './icons/DarkModeIcon';
 import HomeLinkIcon from './icons/HomeLinkIcon';
 import LightModeIcon from './icons/LightModeIcon';
@@ -59,6 +60,9 @@ const PageHeader = () => {
                     </button>
                 </div>
             </nav>
+            <div className="mb-10 mt-4 flex items-center justify-start">
+                <SearchButton />
+            </div>
         </header>
     );
 };
