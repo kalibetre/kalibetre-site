@@ -1,10 +1,11 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
+import GroupTitle from './GroupTitle';
 import ProjectCard from './ProjectCard';
 
 const FeaturedProjects = () => {
     const data = useStaticQuery(graphql`
-        query ProjectsListQuery {
+        query {
             allMdx(
                 sort: { frontmatter: { date: DESC } }
                 filter: {
@@ -35,13 +36,7 @@ const FeaturedProjects = () => {
 
     return (
         <>
-            <div className="my-4 flex items-center justify-center">
-                <span className="block h-[1px] w-full flex-1 bg-slate-100 dark:bg-slate-700" />
-                <span className="px-6 text-xs text-slate-500">
-                    Featured Projects
-                </span>
-                <span className="block h-[1px] w-full flex-1 bg-slate-100 dark:bg-slate-700" />
-            </div>
+            <GroupTitle title="Featured Projects" />
             <div className="grid grid-cols-1 justify-center gap-3 sm:grid-cols-2 md:grid-cols-3">
                 {nodes.map(
                     (node: any) =>
