@@ -18,7 +18,7 @@ const Projects: React.FC<PageProps<Queries.ProjectsQuery>> = ({ data }) => {
                 <a
                     href="https://github.com/kalibetre"
                     target="_blank"
-                    className="my-4 flex w-36 items-center justify-center gap-2 rounded-xl border-[0.5px] border-slate-400 p-1 text-xs hover:bg-slate-100 dark:border-slate-600 dark:hover:bg-slate-700"
+                    className="my-4 flex w-36 items-center justify-center gap-2 rounded-lg border-[0.5px] border-slate-400 p-1 text-xs hover:bg-slate-100 dark:border-slate-600 dark:hover:bg-slate-700"
                 >
                     <div className="h-6 w-6">
                         <GitHubIcon />
