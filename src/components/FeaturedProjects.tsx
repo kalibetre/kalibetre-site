@@ -42,7 +42,7 @@ const FeaturedProjects = () => {
                 </span>
                 <span className="block h-[1px] w-full flex-1 bg-slate-100 dark:bg-slate-700" />
             </div>
-            <div className="flex flex-wrap gap-3">
+            <div className="grid grid-cols-1 justify-center gap-3 sm:grid-cols-2 md:grid-cols-3">
                 {nodes.map(
                     (node: any) =>
                         node.frontmatter && (

@@ -30,7 +30,7 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
         <Link to={`/projects/${slug}`}>
             <div
                 key={slug}
-                className="group flex w-full flex-col justify-between rounded-md p-2 shadow-teal-400 hover:shadow-lg dark:hover:shadow-slate-500 sm:h-52 sm:w-64"
+                className="group flex w-full flex-col justify-between rounded-md p-2 shadow-teal-400 hover:shadow-lg dark:hover:shadow-slate-500"
             >
                 <div className="mb-4">
                     <h2 className="text-md group-hover:text-teal-600">
