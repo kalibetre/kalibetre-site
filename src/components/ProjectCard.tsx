@@ -33,7 +33,7 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
                 className="group flex w-full flex-col justify-between rounded-md p-2 shadow-teal-400 hover:shadow-lg dark:hover:shadow-slate-500"
             >
                 <div className="mb-4">
-                    <h2 className="text-md group-hover:text-teal-600">
+                    <h2 className="text-md line-clamp-2 group-hover:text-teal-600">
                         {title}
                     </h2>
                     <h3 className="text-xs text-slate-400 line-clamp-2">
