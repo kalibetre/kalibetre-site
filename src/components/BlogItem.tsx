@@ -22,7 +22,7 @@ const BlogItem: React.FC<BlogItemProps> = (props) => {
                     <h3 className="text-md text-slate-500">{desc}</h3>
                 </div>
             </article>
-            <span className="absolute -left-[24px] top-6 h-[12px] w-[12px] rounded-full border-[1px] border-slate-400 bg-white ring-teal-500 group-hover:ring-2 dark:bg-slate-900" />
+            <span className="absolute -left-[24px] top-6 h-[12px] w-[12px] rounded-full border-[1px] border-slate-300 bg-white ring-teal-500 group-hover:ring-2 dark:border-slate-600 dark:bg-slate-900" />
         </Link>
     );
 };

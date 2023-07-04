@@ -15,7 +15,7 @@ const Blogs: React.FC<PageProps<Queries.BlogsQuery>> = ({ data }) => {
                 subtitle="My technical writings and articles about tech and programming"
             />
             <div className="relative flex">
-                <div className="absolute left-[6px] mt-6 h-full w-6 border-l-[0.5px] border-slate-600"></div>
+                <div className="absolute left-[6px] mt-6 h-full w-6 border-l-[0.5px] border-slate-300 dark:border-slate-600"></div>
                 <div className="ml-[24px] flex w-full flex-col justify-center gap-3">
                     {nodes.map(
                         (node: any) =>
