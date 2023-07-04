@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import PageLink from './PageLink';
 import SearchButton from './SearchButton';
 import DarkModeIcon from './icons/DarkModeIcon';
@@ -26,12 +26,6 @@ const PageHeader = () => {
             localStorage.setItem('theme', 'dark');
         }
     };
-
-    useEffect(() => {
-        if (localStorage.getItem('theme') === 'dark') {
-            document.documentElement.classList.add('dark');
-        }
-    });
 
     return (
         <header>
