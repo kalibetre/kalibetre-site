@@ -14,7 +14,7 @@ const BlogItem: React.FC<BlogItemProps> = (props) => {
         <Link to={`/blogs/${slug}`} className="group relative">
             <article
                 key={slug}
-                className="group flex w-full flex-col justify-between rounded-md p-4 hover:bg-slate-100 dark:hover:bg-slate-800"
+                className="group flex w-full flex-col justify-between rounded-md p-4 hover:bg-slate-50 dark:hover:bg-slate-800"
             >
                 <div className="mb-4">
                     <p className="mb-2 text-sm text-slate-500">{date}</p>
