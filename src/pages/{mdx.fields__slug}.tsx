@@ -12,19 +12,23 @@ const BlogPost: React.FC<PageProps<Queries.BlogPostQuery>> = ({
 
     return (
         <PageLayout>
-            <article className="prose dark:prose-invert lg:prose-lg">
-                <div>
-                    <h1>{mdx?.frontmatter?.title}</h1>
-                    <p className="text-slate-500">{mdx?.frontmatter?.desc}</p>
-                    <div className="">
-                        <GatsbyImageWrapper
-                            image={mdx?.frontmatter?.image}
-                            alt={mdx?.frontmatter?.title}
-                        />
+            <div className="w-full">
+                <article className="prose mx-auto max-w-3xl dark:prose-invert lg:prose-lg">
+                    <div>
+                        <h1>{mdx?.frontmatter?.title}</h1>
+                        <p className="text-slate-500">
+                            {mdx?.frontmatter?.desc}
+                        </p>
+                        <div className="">
+                            <GatsbyImageWrapper
+                                image={mdx?.frontmatter?.image}
+                                alt={mdx?.frontmatter?.title}
+                            />
+                        </div>
                     </div>
-                </div>
-                {children}
-            </article>
+                    {children}
+                </article>
+            </div>
         </PageLayout>
     );
 };
