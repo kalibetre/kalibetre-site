@@ -1,18 +1,18 @@
 import React from 'react';
 import PageLink from './PageLink';
-import SearchButton from './SearchButton';
+import Search from './Search';
 import DarkModeIcon from './icons/DarkModeIcon';
 import HomeLinkIcon from './icons/HomeLinkIcon';
 import LightModeIcon from './icons/LightModeIcon';
 
 const PAGE_LINKS = [
     {
-        label: 'blogs',
-        link: '/blogs',
+        label: 'blog',
+        link: '/blog',
     },
     {
         label: 'projects',
-        link: '/projects',
+        link: '/project',
     },
 ];
 
@@ -55,7 +55,7 @@ const PageHeader = () => {
                 </div>
             </nav>
             <div className="mb-10 mt-4 flex items-center justify-start">
-                <SearchButton />
+                <Search />
             </div>
         </header>
     );
