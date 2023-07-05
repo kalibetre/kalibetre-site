@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { Hits, Index, useSearchBox } from 'react-instantsearch-hooks-web';
 import AlgoliaLink from './AlgoliaLink';
@@ -13,6 +13,7 @@ type SearchModalProps = {
 const SearchModal: React.FC<SearchModalProps> = (props) => {
     const { handleClose } = props;
     const { query, refine } = useSearchBox();
+    const searchInput = useRef<HTMLInputElement>(null);
 
     const closeModal = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         if (e.target !== e.currentTarget) return;
@@ -27,6 +28,8 @@ const SearchModal: React.FC<SearchModalProps> = (props) => {
 
     useEffect(() => {
         window.addEventListener('keydown', handleKeyDown);
+        searchInput.current?.focus();
+
         return () => {
             window.removeEventListener('keydown', handleKeyDown);
         };
@@ -44,6 +47,7 @@ const SearchModal: React.FC<SearchModalProps> = (props) => {
                             <SearchIcon />
                         </span>
                         <input
+                            ref={searchInput}
                             type="text"
                             className="flex-1 appearance-none bg-transparent p-2 focus:border-transparent focus:outline-none focus:ring-0"
                             placeholder="Search Everywhere ..."
