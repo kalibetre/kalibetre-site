@@ -13,7 +13,7 @@ const PageLayout: React.FC<PageLayoutProps> = (props) => {
             <div className="mx-4 md:mx-auto md:w-5/6 md:max-w-screen-lg">
                 <PageHeader />
                 <main>{children}</main>
-                <footer className="mt-24 py-8 text-center text-xs">
+                <footer className="mt-24 py-8 text-center text-xs dark:text-slate-300">
                     Kalkidan Betre &copy; 2023
                 </footer>
             </div>
