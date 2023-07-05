@@ -11,7 +11,7 @@ type BlogItemProps = {
 const BlogItem: React.FC<BlogItemProps> = (props) => {
     const { date, slug, title, desc } = props;
     return (
-        <Link to={`/blogs/${slug}`} className="group relative">
+        <Link to={`/blog/${slug}`} className="group relative">
             <article
                 key={slug}
                 className="group flex w-full flex-col justify-between rounded-md p-4 hover:bg-slate-50 dark:hover:bg-slate-800"

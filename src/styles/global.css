@@ -16,4 +16,9 @@
 	.custom-bg-drk {
 		background: linear-gradient(180deg, rgba(238, 174, 202, 0.7077205882352942) 0%, rgba(232, 175, 204, 0.5858718487394958) 0%, rgba(222, 177, 207, 0.4990371148459384) 25%, rgba(185, 182, 220, 0.28335084033613445) 59%, rgba(15, 23, 42, 0) 100%);
 	}
+
+	mark {
+		background-color: inherit !important;
+		@apply text-red-300 !important;
+	}
 }

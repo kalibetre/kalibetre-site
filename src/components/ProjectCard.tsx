@@ -13,7 +13,7 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
     const { slug, title, desc, image } = props;
 
     return (
-        <Link to={`/projects/${slug}`}>
+        <Link to={`/project/${slug}`}>
             <div
                 key={slug}
                 className="group flex w-full flex-col justify-between rounded-md p-4 shadow-teal-400 hover:shadow-lg dark:hover:shadow-slate-500"

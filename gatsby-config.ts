@@ -1,4 +1,7 @@
+import * as dotenv from 'dotenv';
 import type { GatsbyConfig } from 'gatsby';
+
+dotenv.config();
 
 const config: GatsbyConfig = {
     siteMetadata: {
@@ -44,6 +47,14 @@ const config: GatsbyConfig = {
                 path: `${__dirname}/content/projects/`,
             },
             __key: 'blogs',
+        },
+        {
+            resolve: `gatsby-plugin-algolia`,
+            options: {
+                appId: process.env.GATSBY_ALGOLIA_APP_ID,
+                apiKey: process.env.ALGOLIA_ADMIN_KEY,
+                queries: require('./src/utils/algolia-queries'),
+            },
         },
     ],
 };

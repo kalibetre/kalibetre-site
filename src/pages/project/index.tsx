@@ -31,8 +31,9 @@ const Projects: React.FC<PageProps<Queries.ProjectsQuery>> = ({ data }) => {
                     (node: any) =>
                         node.frontmatter && (
                             <ProjectCard
-                                key={node.frontmatter.slug}
+                                key={node.fields.slug}
                                 {...node.frontmatter}
+                                {...node.fields}
                             />
                         )
                 )}
@@ -53,7 +54,6 @@ export const query = graphql`
         ) {
             nodes {
                 frontmatter {
-                    slug
                     date(formatString: "MMMM D, YYYY")
                     title
                     desc
@@ -62,6 +62,9 @@ export const query = graphql`
                             gatsbyImageData
                         }
                     }
+                }
+                fields {
+                    slug
                 }
             }
         }

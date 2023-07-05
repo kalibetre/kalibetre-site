@@ -17,7 +17,6 @@ const FeaturedProjects = () => {
             ) {
                 nodes {
                     frontmatter {
-                        slug
                         date(formatString: "MMMM D, YYYY")
                         title
                         desc
@@ -26,6 +25,9 @@ const FeaturedProjects = () => {
                                 gatsbyImageData
                             }
                         }
+                    }
+                    fields {
+                        slug
                     }
                 }
             }
@@ -42,8 +44,9 @@ const FeaturedProjects = () => {
                     (node: any) =>
                         node.frontmatter && (
                             <ProjectCard
-                                key={node.frontmatter.slug}
+                                key={node.fields.slug}
                                 {...node.frontmatter}
+                                {...node.fields}
                             />
                         )
                 )}

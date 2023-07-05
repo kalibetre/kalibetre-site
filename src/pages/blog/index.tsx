@@ -21,8 +21,9 @@ const Blogs: React.FC<PageProps<Queries.BlogsQuery>> = ({ data }) => {
                         (node: any) =>
                             node.frontmatter && (
                                 <BlogItem
-                                    key={node.frontmatter.slug}
+                                    key={node.fields.slug}
                                     {...node.frontmatter}
+                                    {...node.fields}
                                 />
                             )
                     )}
@@ -44,10 +45,12 @@ export const query = graphql`
         ) {
             nodes {
                 frontmatter {
-                    slug
                     date(formatString: "MMMM D, YYYY")
                     title
                     desc
+                }
+                fields {
+                    slug
                 }
             }
         }

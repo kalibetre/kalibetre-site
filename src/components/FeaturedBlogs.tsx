@@ -16,10 +16,12 @@ const FeaturedBlogs = () => {
             ) {
                 nodes {
                     frontmatter {
-                        slug
                         date(formatString: "MMMM D, YYYY")
                         title
                         desc
+                    }
+                    fields {
+                        slug
                     }
                 }
             }
@@ -44,8 +46,9 @@ const FeaturedBlogs = () => {
                         (node: any) =>
                             node.frontmatter && (
                                 <BlogItem
-                                    key={node.frontmatter.slug}
+                                    key={node.fields.slug}
                                     {...node.frontmatter}
+                                    {...node.fields}
                                 />
                             )
                     )}
