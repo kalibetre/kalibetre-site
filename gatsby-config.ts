@@ -46,7 +46,7 @@ const config: GatsbyConfig = {
                 name: 'projects',
                 path: `${__dirname}/content/projects/`,
             },
-            __key: 'blogs',
+            __key: 'projects',
         },
         {
             resolve: `gatsby-plugin-algolia`,

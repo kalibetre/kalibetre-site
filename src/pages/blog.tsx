@@ -1,9 +1,9 @@
 import { HeadFC, PageProps, graphql } from 'gatsby';
 import React from 'react';
-import BlogItem from '../../components/BlogItem';
-import PageHead from '../../components/PageHead';
-import PageLayout from '../../components/PageLayout';
-import PageTitle from '../../components/PageTitle';
+import BlogItem from '../components/BlogItem';
+import PageHead from '../components/PageHead';
+import PageLayout from '../components/PageLayout';
+import PageTitle from '../components/PageTitle';
 
 const Blogs: React.FC<PageProps<Queries.BlogsQuery>> = ({ data }) => {
     const { nodes } = data.allMdx;

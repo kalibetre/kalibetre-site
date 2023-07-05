@@ -1,10 +1,10 @@
 import { HeadFC, PageProps, graphql } from 'gatsby';
 import React from 'react';
-import PageHead from '../../components/PageHead';
-import PageLayout from '../../components/PageLayout';
-import PageTitle from '../../components/PageTitle';
-import ProjectCard from '../../components/ProjectCard';
-import GitHubIcon from '../../components/icons/GitHubIcon';
+import PageHead from '../components/PageHead';
+import PageLayout from '../components/PageLayout';
+import PageTitle from '../components/PageTitle';
+import ProjectCard from '../components/ProjectCard';
+import GitHubIcon from '../components/icons/GitHubIcon';
 
 const Projects: React.FC<PageProps<Queries.ProjectsQuery>> = ({ data }) => {
     const { nodes } = data.allMdx;

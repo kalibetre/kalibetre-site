@@ -4,7 +4,7 @@ import { Highlight, Snippet } from 'react-instantsearch-hooks-web';
 
 const SearchResult = ({ hit }: any) => {
     return (
-        <Link to={`/${hit.type}/${hit.slug}`}>
+        <Link to={hit.slug}>
             <div className="my-2 rounded-md bg-slate-50 p-2 hover:bg-slate-100 dark:bg-slate-800 dark:hover:bg-slate-600">
                 <span className="text-xs capitalize text-slate-400">
                     {hit.type}

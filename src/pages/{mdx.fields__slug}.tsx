@@ -1,14 +1,15 @@
 import { HeadFC, PageProps, graphql } from 'gatsby';
 import React from 'react';
-import GatsbyImageWrapper from '../../components/GatsbyImageWrapper';
-import PageHead from '../../components/PageHead';
-import PageLayout from '../../components/PageLayout';
+import GatsbyImageWrapper from '../components/GatsbyImageWrapper';
+import PageHead from '../components/PageHead';
+import PageLayout from '../components/PageLayout';
 
-const ProjectDoc: React.FC<PageProps<Queries.ProjectDocQuery>> = ({
+const BlogPost: React.FC<PageProps<Queries.BlogPostQuery>> = ({
     data,
     children,
 }) => {
     const { mdx } = data;
+
     return (
         <PageLayout>
             <article className="prose dark:prose-invert lg:prose-lg">
@@ -29,7 +30,7 @@ const ProjectDoc: React.FC<PageProps<Queries.ProjectDocQuery>> = ({
 };
 
 export const query = graphql`
-    query ProjectDoc($id: String) {
+    query BlogPost($id: String) {
         mdx(id: { eq: $id }) {
             frontmatter {
                 date(formatString: "MMMM D, YYYY")
@@ -45,6 +46,6 @@ export const query = graphql`
     }
 `;
 
-export const Head: HeadFC = () => <PageHead title="Projects" />;
+export const Head: HeadFC = () => <PageHead title="Blogs" />;
 
-export default ProjectDoc;
+export default BlogPost;
