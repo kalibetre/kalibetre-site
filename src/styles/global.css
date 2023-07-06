@@ -21,4 +21,8 @@
 		background-color: inherit !important;
 		@apply text-red-300 !important;
 	}
+
+	pre, code {
+		@apply text-base !important;
+	}
 }
