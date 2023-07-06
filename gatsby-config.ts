@@ -13,7 +13,6 @@ const config: GatsbyConfig = {
         'gatsby-plugin-postcss',
         'gatsby-plugin-image',
         'gatsby-plugin-sitemap',
-        'gatsby-plugin-mdx',
         'gatsby-plugin-sharp',
         'gatsby-transformer-sharp',
         {
@@ -48,6 +47,20 @@ const config: GatsbyConfig = {
             },
             __key: 'projects',
         },
+        {
+            resolve: `gatsby-plugin-mdx`,
+            options: {
+              gatsbyRemarkPlugins: [
+                {
+                  resolve: `gatsby-remark-images`,
+                  options: {
+                    maxWidth: 1200,
+                  },
+                },
+                `gatsby-remark-embedder`,
+              ],
+            },
+          },
         {
             resolve: `gatsby-plugin-algolia`,
             options: {
