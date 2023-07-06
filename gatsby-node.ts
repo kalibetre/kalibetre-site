@@ -9,5 +9,12 @@ export const onCreateNode = ({ node, getNode, actions }: any) => {
             node,
             value: `/${node.frontmatter.type}/${value}`,
         });
+    } else if (node.internal.type === 'ProjectsYaml' && node.hasBlog) {
+        const value = createFilePath({ node, getNode }).replace(/^\/|\/$/g, '');
+        createNodeField({
+            name: `blogUrl`,
+            node,
+            value: `/blog/${value}`,
+        });
     }
 };
