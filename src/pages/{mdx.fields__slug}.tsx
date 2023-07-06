@@ -13,9 +13,11 @@ const BlogPost: React.FC<PageProps<Queries.BlogPostQuery>> = ({
   return (
     <PageLayout>
       <div className="w-full">
-        <article className="prose mx-auto max-w-3xl dark:prose-invert lg:prose-lg">
+        <article className="prose mx-auto max-w-3xl dark:prose-invert sm:prose-lg">
           <div>
-            <h1 className="mb-0 pb-0">{mdx?.frontmatter?.title}</h1>
+            <h1 className="mb-4 pb-0 text-4xl sm:text-5xl">
+              {mdx?.frontmatter?.title}
+            </h1>
             <time className="text-slate-500">{mdx?.frontmatter?.date}</time>
             <div className="mt-8">
               <GatsbyImageWrapper
