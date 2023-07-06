@@ -58,6 +58,8 @@ const config: GatsbyConfig = {
                   },
                 },
                 `gatsby-remark-embedder`,
+                `gatsby-remark-prismjs`,
+                `gatsby-remark-gifs`,
               ],
             },
           },
