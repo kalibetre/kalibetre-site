@@ -1,0 +1,9 @@
+title: "Berana-viz: A Data Structures and Algorithms Web App"
+author: "Kalkidan Betre"
+date: 2023-03-06
+desc: Berana-viz is a React.js and D3.js powered web app for visualizing data structures and algorithms, making learning complex concepts easier through interactive visualizations.
+image: "./images/berana-viz.png"
+url: "https://berana.org/beranaviz"
+featured: true
+published: true
+hasBlog: true
