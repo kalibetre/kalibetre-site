@@ -1,57 +1,99 @@
 ---
 type: project
-title: 'Introducing Gesela: An Enterprise Issue Tracking and Management Web App'
-author: 'Kalkidan Betre'
-date: 2017-01-24
+title: "Gesela: An Enterprise Issue Tracking and Management Web App"
+author: "Kalkidan Betre"
+date: 2023-07-02
 desc: Gesela is an enterprise issue tracking and management web app using React.js and Spring Boot. It simplifies issue management, improves productivity, and enhances collaboration.
-image: './gesela.png'
-url: 'https://berana.org/beranaviz'
+image: "./gesela.png"
+url: "https://github.com/kalibetre/gesela-issue-tracker"
 featured: true
 published: true
 ---
 
-Gesela is a powerful web application designed to streamline issue tracking and management in enterprise environments. Developed using the popular technologies React.js and Spring Boot, Gesela offers a comprehensive set of features to effectively track, prioritize, and resolve issues within an organization.
+import ImageCaption from "../../../src/components/ImageCaption";
+import GitHubProjectLink from "../../../src/components/GitHubProjectLink";
 
-## The Need for Gesela
+Gesela is an Enterprise Issue Tracking and Management system specifically designed for service-based organizations, with a focus on those in developing countries like Ethiopia.
 
-In today's fast-paced business landscape, efficient issue tracking and management are critical for organizations to deliver quality products and services. Traditional methods such as spreadsheets and emails often fall short in effectively managing and resolving complex issues. This is where Gesela steps in, offering a modern, centralized solution for issue tracking and management.
+## Background
 
-## Key Features
+Service-based companies are integral to any country, providing essential support to the community. Their services can range from simple to complex processes, but customer satisfaction is key to their success or failure.
 
-### Intuitive Issue Tracking
+Unfortunately, in developing countries, both government offices and some private companies use inefficient issue tracking and management systems resulting in customer frustration.
 
-Gesela provides a user-friendly interface for creating and tracking issues. Users can easily submit new issues, assign them to specific team members, set priorities, and attach relevant files or documents. The intuitive design ensures that no issue slips through the cracks and that the right stakeholders are notified promptly.
+While international companies have implemented various methods to improve customer satisfaction, these approaches have not been widely adopted in our country.
 
-### Comprehensive Issue Details
+## The Problem
 
-Each issue in Gesela comes with a rich set of details, allowing users to gather all the necessary information in one place. Users can add descriptions, comments, labels, and due dates to provide context and facilitate collaboration. Additionally, Gesela allows users to link related issues, helping teams identify dependencies and track progress effectively.
+The Problem that this software tries to address encompass the following
 
-### Workflow Automation
+- Service based companies especially in Ethiopia are still not fully digitalized
+- Black box model is still prevalent in most companies, where customers are not aware what is happening to their requests
+- Manually following up issues is very hectic and time consuming
+- Lack of transparency is a major contributor to low customer satisfaction
+- Government offices (esp. In Ethiopian) are still serving customers using traditional methods
+- Lack of real time feedback affects both the service organization and the customer
 
-Gesela automates various aspects of issue management, streamlining the process and reducing manual effort. Users can define custom workflows and status transitions, ensuring that issues move through the appropriate stages seamlessly. Automated notifications and reminders keep stakeholders informed, improving transparency and accountability.
+## Technologies Used
 
-### Real-time Collaboration
+This project was built using ReactJS frontend and Spring Boot Backend. These tech stack is selected for various reasons including scalability and security
 
-Collaboration lies at the heart of Gesela. Teams can easily collaborate on issues by sharing updates, attaching files, and discussing resolutions in real-time. With the ability to mention specific team members and receive notifications on relevant changes, Gesela fosters effective communication and teamwork.
+### Frontend
 
-### Reporting and Analytics
+The frontend uses ReactJS with Redux. Redux is great library for sate management especially with the Redux Toolkit.
+The over all architecture of the frontend web app looks like the below illustration
 
-Gesela offers comprehensive reporting and analytics capabilities, empowering organizations to gain insights into issue patterns, team performance, and resource allocation. Users can generate custom reports, track key performance indicators, and identify bottlenecks or areas for improvement. These insights help organizations make data-driven decisions and optimize their issue management processes.
+![Frontend Architecture](./frontend_arch.png)
 
-## How to Use Gesela?
+<ImageCaption>Gesela Frontend Architecture</ImageCaption>
 
-Gesela can be accessed through any modern web browser, eliminating the need for complex installations or configurations. Users can simply log in to the Gesela website using their credentials and start managing issues right away.
+As illustrated above, the react components communicate with the Redux Store for data as well as authentication.
+Hence, the Redux store is the only source of truth for the frontend. The store in turn is connected to the backend Gesela API.
+This makes the frontend very scalable and easy to maintain.
 
-Upon logging in, users are presented with a personalized dashboard that provides an overview of their assigned issues, upcoming deadlines, and recent activity. From there, users can navigate to different modules, such as creating new issues, updating existing ones, or accessing reports and analytics.
+### Backend
 
-The intuitive interface and seamless navigation make Gesela easy to adopt, ensuring that users can start leveraging its features quickly and efficiently.
+The backend is built using Spring Boot. Spring Boot is a great framework for building REST APIs. It is very easy to use and has a lot of features out of the box.
+The backend architecture looks like the below illustration
 
-## Conclusion
+![Backend Architecture](./backend_arch.png)
 
-Gesela revolutionizes issue tracking and management in enterprise environments. With its powerful combination of React.js and Spring Boot, Gesela offers a comprehensive suite of features that enhance collaboration, automate workflows, and provide valuable insights into issue patterns and team performance.
+<ImageCaption>Gesela Backend Architecture</ImageCaption>
 
-By adopting Gesela, organizations can streamline their issue management processes, improve productivity, and deliver exceptional results. Whether you're a small team or a large enterprise, Gesela empowers you to stay on top of your issues and drive continuous improvement.
+The backend utilizes a number of Spring Boot features including Spring Security, Spring Data JPA, Spring Web, etc to build a robust and secure REST API.
+Furthermore, Hibernate is used as the ORM for the database. The database used is MySQL.
 
-Experience the power of Gesela today and witness how it transforms issue tracking and management within your organization!
+## Features
 
-Visit the Gesela website at [www.gesela.com](https://www.gesela.com) to learn more and get started.
+The following are the main features of the Gesela Issue Tracking and Management System:
+
+- Allows both customers and employees to create, submit and track issues
+- Allows the organization to manage issues effectively with a role based model (Issue Manager, and Issue Handler)
+- Provides report to the organization to visualize the effectiveness of various departments
+- Provides notifications in each step of the issues life cycle allowing for better transparency
+
+## Demo
+
+<iframe
+  width="100%"
+  height="415"
+  src="https://www.youtube.com/embed/JVkEkr-wv7Q"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen
+></iframe>
+<ImageCaption>Gesela Issue Tracking and Managment System</ImageCaption>
+
+## Open Source
+
+This project is open source and can be found on
+
+<GitHubProjectLink
+  url="https://github.com/kalibetre/gesela-issue-tracker"
+  label="Gesela Issue Tracker Web App"
+/>
+<GitHubProjectLink
+  url="https://github.com/kalibetre/gesela-api"
+  label="Gesela API"
+/>
