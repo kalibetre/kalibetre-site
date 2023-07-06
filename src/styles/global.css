@@ -25,4 +25,8 @@
 	pre, code {
 		@apply text-base !important;
 	}
+
+	a img {
+		@apply rounded-md !important;
+	}
 }
