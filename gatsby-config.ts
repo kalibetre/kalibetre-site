@@ -13,9 +13,9 @@ const config: GatsbyConfig = {
         'gatsby-plugin-postcss',
         'gatsby-plugin-image',
         'gatsby-plugin-sitemap',
-        'gatsby-plugin-mdx',
         'gatsby-plugin-sharp',
         'gatsby-transformer-sharp',
+        'gatsby-transformer-yaml-full',
         {
             resolve: 'gatsby-source-filesystem',
             options: {
@@ -48,6 +48,22 @@ const config: GatsbyConfig = {
             },
             __key: 'projects',
         },
+        {
+            resolve: `gatsby-plugin-mdx`,
+            options: {
+              gatsbyRemarkPlugins: [
+                {
+                  resolve: `gatsby-remark-images`,
+                  options: {
+                    maxWidth: 1200,
+                  },
+                },
+                `gatsby-remark-embedder`,
+                `gatsby-remark-prismjs`,
+                `gatsby-remark-gifs`,
+              ],
+            },
+          },
         {
             resolve: `gatsby-plugin-algolia`,
             options: {

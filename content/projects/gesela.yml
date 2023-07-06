@@ -1,0 +1,9 @@
+title: "Gesela: An Enterprise Issue Tracking and Management Web App"
+author: "Kalkidan Betre"
+date: 2023-07-02
+desc: Gesela is an enterprise issue tracking and management web app using React.js and Spring Boot. It simplifies issue management, improves productivity, and enhances collaboration.
+image: "./images/gesela.png"
+url: "https://github.com/kalibetre/gesela-issue-tracker"
+featured: true
+published: true
+hasBlog: true
