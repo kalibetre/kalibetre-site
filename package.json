@@ -1,11 +1,11 @@
 {
   "name": "kalibetre-site",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "private": true,
   "description": "kalibetre-site",
   "author": "kalibetre",
   "keywords": [
-    "gatsby"
+    "gatsby", "react", "tailwindcss"
   ],
   "scripts": {
     "develop": "gatsby develop",
