@@ -8,7 +8,7 @@ import UpWorkIcon from "./icons/UpWorkIcon";
 const Hero = () => {
   return (
     <div className="my-12 flex w-full items-center justify-center gap-4 divide-x-[1px] dark:divide-slate-500">
-      <div className="relative h-full w-40 rounded-full p-2">
+      <div className="relative h-48 w-48 rounded-full p-2">
         <div className="absolute bottom-0 right-0 h-full w-full rounded-full bg-slate-300 blur-md dark:bg-slate-800"></div>
         <StaticImage
           src="../images/kalibetre.png"
