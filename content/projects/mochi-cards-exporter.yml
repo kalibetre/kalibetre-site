@@ -1,0 +1,9 @@
+title: "Mochi Cards Exporter Plugin for Obsidian"
+author: "Kalkidan Betre"
+date: 2021-11-26
+desc: This is an Obsidian plugin that exports markdown notes to Mochi flashcards, which is an awesome flashcard app that is based on markdown. I highly recommend it, if you use flashcards and spaced repetition to study or remember anything.
+image: "./images/mochi-cards-exporter.png"
+url: "https://github.com/kalibetre/mochi-cards-exporter"
+featured: true
+published: true
+hasBlog: false
