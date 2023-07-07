@@ -8,7 +8,7 @@ const config: GatsbyConfig = {
         title: `kalibetre`,
         description: `My personal website where I showcase my projects and share idea with my blogs`,
         twitterUsername: `@kalibetre`,
-        image: `/kalibetre.og.png`,
+        image: `/kalibetre-og.jpg`,
         siteUrl: `https://www.kalibetre.com`,
     },
     graphqlTypegen: true,
