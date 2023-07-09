@@ -61,4 +61,4 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <PageHead title="Home Page" />;
+export const Head: HeadFC = () => <PageHead title="kalibetre" />;
