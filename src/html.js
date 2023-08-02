@@ -1,5 +1,5 @@
-import PropTypes from "prop-types"
-import React from "react"
+import PropTypes from "prop-types";
+import React from "react";
 
 export default function HTML(props) {
   return (
@@ -11,8 +11,8 @@ export default function HTML(props) {
             (function() {
               try {
                 if (!('theme' in localStorage)) {
-                  localStorage.theme = 'dark'
-                  document.documentElement.classList.add('dark')
+                  localStorage.theme = 'light'
+                  document.documentElement.classList.add('light')
                 } else if (localStorage.theme === 'dark') {
                   document.documentElement.classList.add('dark')
                 } else {
@@ -20,7 +20,7 @@ export default function HTML(props) {
                 }
               } catch (_) {}
             })();
-            `
+            `,
           }}
         />
         <meta charSet="utf-8" />
@@ -41,7 +41,7 @@ export default function HTML(props) {
         {props.postBodyComponents}
       </body>
     </html>
-  )
+  );
 }
 
 HTML.propTypes = {
@@ -51,4 +51,4 @@ HTML.propTypes = {
   preBodyComponents: PropTypes.array,
   body: PropTypes.string,
   postBodyComponents: PropTypes.array,
-}
+};

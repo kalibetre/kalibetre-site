@@ -12,11 +12,16 @@ import GatsbyIcon from "../components/icons/GatsbyIcon";
 import ReactJsIcon from "../components/icons/ReactJsIcon";
 import SpringBootIcon from "../components/icons/SpringBootIcon";
 import TailwindIcon from "../components/icons/TailwindIcon";
+import NextJsIcon from "../components/icons/NextJsIcon";
 
 const TECH_STACKS = [
   {
     icon: <ReactJsIcon />,
     label: "React",
+  },
+  {
+    icon: <NextJsIcon />,
+    label: "NextJs",
   },
   {
     icon: <GatsbyIcon />,
@@ -61,4 +66,4 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <PageHead title="Home Page" />;
+export const Head: HeadFC = () => <PageHead title="kalibetre" />;
