@@ -75,6 +75,17 @@ const config: GatsbyConfig = {
                 queries: require('./src/utils/algolia-queries'),
             },
         },
+        {
+			resolve: '@highlight-run/gatsby-plugin-highlight',
+			options: {
+				orgID: 'zg095lg9',
+                tracingOrigins: true,
+                networkRecording: {
+                    enabled: true,
+                    recordHeadersAndBody: true,
+                },
+			},
+		},
     ],
 };
 

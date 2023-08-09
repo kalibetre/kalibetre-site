@@ -24,6 +24,7 @@
     "lint:fix": "eslint --fix src/**/*.{js,ts,tsx}"
   },
   "dependencies": {
+    "@highlight-run/gatsby-plugin-highlight": "^0.0.6",
     "@mdx-js/react": "^2.3.0",
     "algoliasearch": "^4.18.0",
     "autoprefixer": "^10.4.14",
