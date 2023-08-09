@@ -12,7 +12,7 @@ type ProjectCardProps = {
 };
 
 const ProjectCard: React.FC<ProjectCardProps> = (props) => {
-  const { date, title, desc, blogUrl, url, image } = props;
+  const { title, desc, blogUrl, url, image } = props;
 
   const content = () => (
     <div className="group flex w-full flex-col justify-between rounded-md p-4 shadow-teal-400 hover:shadow-lg dark:hover:shadow-slate-500">
@@ -29,7 +29,7 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
   return blogUrl ? (
     <Link to={blogUrl}>{content()}</Link>
   ) : (
-    <a href={url} target="_blank">
+    <a href={url} target="_blank" rel="noreferrer">
       {content()}
     </a>
   );

@@ -18,7 +18,7 @@ const Hero = () => {
         />
       </div>
       <div className="flex flex-col justify-center p-2">
-        <p className="text-xs text-slate-500 sm:text-sm">Hi, I'm</p>
+        <p className="text-xs text-slate-500 sm:text-sm">Hi, I&apos; m</p>
         <h1 className="text-md sm:text-2xl">Kalkidan Betre</h1>
         <p className="text-xs sm:text-sm">
           Software engineer based in &nbsp;
@@ -26,6 +26,7 @@ const Hero = () => {
             className="text-teal-600 after:content-['_↗'] hover:text-teal-400"
             target="_blank"
             href="https://visitethiopia.travel"
+            rel="noreferrer"
           >
             the land of origins
           </a>

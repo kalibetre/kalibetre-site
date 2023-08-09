@@ -2,16 +2,16 @@ import { Link } from "gatsby";
 import React from "react";
 
 type BlogItemProps = {
-  date: string;
-  slug: string;
-  title: string;
-  desc: string;
+  readonly date: string | null;
+  readonly slug?: string | null;
+  readonly title: string | null;
+  readonly desc: string | null;
 };
 
 const BlogItem: React.FC<BlogItemProps> = (props) => {
   const { date, slug, title, desc } = props;
   return (
-    <Link to={slug} className="group relative">
+    <Link to={slug ?? "/"} className="group relative">
       <article
         key={slug}
         className="group flex w-full flex-col justify-between rounded-md p-4 hover:bg-slate-50 dark:hover:bg-slate-800"

@@ -5,6 +5,17 @@ import PageHead from "../components/PageHead";
 import PageLayout from "../components/PageLayout";
 import PageTitle from "../components/PageTitle";
 
+type Node = {
+  readonly frontmatter: {
+    readonly date: string | null;
+    readonly title: string | null;
+    readonly desc: string | null;
+  } | null;
+  readonly fields: {
+    readonly slug: string | null;
+  } | null;
+};
+
 const Blogs: React.FC<PageProps<Queries.BlogsQuery>> = ({ data }) => {
   const { nodes } = data.allMdx;
 
@@ -18,14 +29,14 @@ const Blogs: React.FC<PageProps<Queries.BlogsQuery>> = ({ data }) => {
         <div className="absolute left-[6px] mt-6 h-full w-6 border-l-[0.5px] border-slate-300 dark:border-slate-600"></div>
         <div className="ml-[24px] flex w-full flex-col justify-center gap-3">
           {nodes.map(
-            (node: any) =>
+            (node: Node) =>
               node.frontmatter && (
                 <BlogItem
-                  key={node.fields.slug}
+                  key={node.fields?.slug}
                   {...node.frontmatter}
                   {...node.fields}
                 />
-              )
+              ),
           )}
         </div>
       </div>

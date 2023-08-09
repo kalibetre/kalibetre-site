@@ -18,6 +18,7 @@ const GitHubProjectLink: React.FC<GitHubProjectLinkProps> = (props) => {
           href={url}
           className="flex-1 appearance-none no-underline"
           target="_blank"
+          rel="noreferrer"
         >
           {label}
         </a>

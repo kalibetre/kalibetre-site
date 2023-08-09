@@ -3,7 +3,7 @@ import React from "react";
 import GatsbyImageWrapper from "../components/GatsbyImageWrapper";
 import PageHead from "../components/PageHead";
 import PageLayout from "../components/PageLayout";
-import { IGatsbyImageData, ImageDataLike, getSrc } from "gatsby-plugin-image";
+import { IGatsbyImageData, getSrc } from "gatsby-plugin-image";
 
 const BlogPost: React.FC<PageProps<Queries.BlogPostQuery>> = ({
   data,

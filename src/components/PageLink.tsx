@@ -16,7 +16,7 @@ const PageLink: React.FC<PageLinkProps> = (props) => {
       >
         {children}
       </Link>
-      <span className="block h-[2px] w-full scale-0 bg-teal-600 transition ease-in-out peer-hover:scale-100 dark:bg-teal-400"></span>
+      <span className="block h-[2px] w-full scale-0 bg-teal-600 transition ease-in-out peer-hover:scale-100 dark:bg-teal-400" />
     </div>
   );
 };

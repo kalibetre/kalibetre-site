@@ -80,7 +80,7 @@ const SearchModal: React.FC<SearchModalProps> = (props) => {
         </div>
       </div>
     </div>,
-    document.body
+    document.body,
   );
 };
 

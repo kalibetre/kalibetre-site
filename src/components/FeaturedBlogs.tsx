@@ -45,7 +45,7 @@ const FeaturedBlogs = () => {
                   {...node.frontmatter}
                   {...node.fields}
                 />
-              )
+              ),
           )}
         </div>
       </div>
